@@ -15,7 +15,7 @@ export default function Home() {
           style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', marginTop: '16px' }}
         >
         <button
-            onClick={() => navigate('/goals')}
+            onClick={() => navigate('/authentication')}
             style={{ width: '180px', padding: '8px 12px', background: '#00b3ffff', color: '#fff', border: 'none', borderRadius: '6px' }}
           >
             Get Started

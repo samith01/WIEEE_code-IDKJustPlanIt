@@ -45,6 +45,7 @@ body {
 }
 
 .hero h2 {
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 2.2rem;
   margin-bottom: 0.8rem;
 }
@@ -80,6 +81,20 @@ button:hover {
 }
 
 .about h2 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Authentication */
+.authentication {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.authentication h2 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: red;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
@@ -91,6 +106,7 @@ button:hover {
 }
 
 .goals h2 {
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
