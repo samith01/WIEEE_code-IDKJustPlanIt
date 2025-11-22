@@ -21,8 +21,12 @@ export default function Goals() {
   useEffect(() => {
     try {
       const stored = localStorage.getItem("goals");
-      if (stored) setGoals(JSON.parse(stored));
-    } catch {
+      console.log("Stored goals:", stored);
+      if (stored && stored !== "[]") {
+        setGoals(JSON.parse(stored));
+      }
+    } catch (error) {
+      console.error("Error loading goals from localStorage:", error);
       setGoals([]);
     }
   }, []);
@@ -231,9 +235,11 @@ export default function Goals() {
             borderRadius: 8,
             border: "1px solid #ddd",
             whiteSpace: "pre-wrap",
+            textAlign: "left",
           }}
         >
           <h3>Your AI-Generated Plan</h3>
+          
           <p style={{ marginTop: 12 }}><ReactMarkdown>{plan}</ReactMarkdown></p>
         </div>
       )}
