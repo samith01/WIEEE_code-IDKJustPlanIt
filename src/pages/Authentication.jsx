@@ -7,7 +7,7 @@ export default function Authentication() {
     const password = formData.get('password');
     
     // handle sign-in logic here
-    await fetch(`http://localhost:4000/api/user/${username}`, {
+    await fetch(`https://0s6pd20t-4000.use.devtunnels.ms/api/user/${username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',   
