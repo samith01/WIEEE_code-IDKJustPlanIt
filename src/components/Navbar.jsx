@@ -9,6 +9,8 @@ export default function Navbar() {
         <Link to="/goals">Goals</Link>
         <Link to="/about">Details</Link>
         <Link to="/authentication">Sign In</Link>
+        <> </>
+        <button onClick={() =>  document.body.classList.toggle('dark-mode')}>Theme</button>
       </div>
     </nav>
   )

@@ -1,17 +1,44 @@
+/* ==========================
+   Variables: Default Dark Theme
+========================== */
 :root {
   --primary-color: #8c52ff;
-  --light-bg: #f9f7ff;
-  --dark-text: #222;
+  --bg: #121212;
+  --text: #eee;
+  --button-bg: #8c52ff;
+  --button-hover: #713fff;
+  --card-bg: #1e1e1e;
+  --footer-bg: #1e1e1e;
+  --glow-color: #8c52ff;
+  --shadow-color: rgba(0,0,0,0.3);
 }
 
+/* Optional Light Theme */
+body.light-mode {
+  --bg: #f9f7ff;
+  --text: #222;
+  --button-bg: var(--primary-color);
+  --button-hover: #713fff;
+  --card-bg: white;
+  --footer-bg: white;
+  --glow-color: #8c52ff;
+  --shadow-color: rgba(0,0,0,0.1);
+}
+
+/* ==========================
+   Global Styles
+========================== */
 body {
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0;
-  background: var(--light-bg);
-  color: var(--dark-text);
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Navbar */
+/* ==========================
+   Navbar
+========================== */
 .navbar {
   background: var(--primary-color);
   color: white;
@@ -19,7 +46,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px var(--shadow-color);
 }
 
 .navbar .logo {
@@ -38,7 +65,9 @@ body {
   text-decoration: underline;
 }
 
-/* Home */
+/* ==========================
+   Hero / Home Section
+========================== */
 .hero {
   text-align: center;
   padding: 5rem 1.5rem;
@@ -46,8 +75,8 @@ body {
 
 .hero h2 {
   font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 2.2rem;
-  margin-bottom: 0.8rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .highlight {
@@ -55,62 +84,57 @@ body {
 }
 
 .hero p {
-  max-width: 600px;
-  margin: 0 auto 1.5rem auto;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
   line-height: 1.6;
+  font-size: 1.1rem;
 }
 
+/* ==========================
+   Buttons
+========================== */
 button {
-  background: var(--primary-color);
+  background: var(--button-bg);
   color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
   font-size: 1rem;
+  transition: 
+    background 0.2s, 
+    box-shadow 0.3s, 
+    transform 0.2s;
 }
 
 button:hover {
-  background: #713fff;
+  background: var(--button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
 }
 
-/* About */
-.about {
+/* ==========================
+   About / Authentication / Goals
+========================== */
+.about, .authentication, .goals {
   padding: 3rem 1.5rem;
   text-align: center;
 }
 
-.about h2 {
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-/* Authentication */
-.authentication {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-.authentication h2 {
-  font-family: "Lucida Console", "Courier New", monospace;
-  color: red;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-/* Goals */
-.goals {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
+.about h2,
+.authentication h2,
 .goals h2 {
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
+.authentication h2 {
+  color: #ff4c4c;
+}
+
+/* ==========================
+   Card Grid
+========================== */
 .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -120,24 +144,30 @@ button:hover {
 }
 
 .card {
-  background: white;
+  background: var(--card-bg);
   border-radius: 12px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
   padding: 1.5rem;
   width: 260px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-7px);
+  box-shadow: 0 6px 20px var(--shadow-color);
 }
 
-/* Footer */
+/* ==========================
+   Footer
+========================== */
 footer {
+  background: var(--footer-bg);
   text-align: center;
-  background: white;
   padding: 1rem;
   margin-top: 3rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #555;
   font-size: 0.9rem;
 }
