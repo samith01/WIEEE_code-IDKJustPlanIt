@@ -236,6 +236,7 @@ export default function Goals() {
             border: "1px solid #ddd",
             whiteSpace: "pre-wrap",
             textAlign: "left",
+            color: "black",
           }}
         >
           <h3>Your AI-Generated Plan</h3>
