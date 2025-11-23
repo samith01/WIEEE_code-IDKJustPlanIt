@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="home">
       <section className="hero">
-        <h2>Welcome to <span className="highlight">T3</span></h2>
+        <h2>Welcome to <span className="highlight">MyGoal</span></h2>
         <p>
           Your personal training assistant that helps you set goals, track progress, and stay motivated on your fitness journey.
         </p>
