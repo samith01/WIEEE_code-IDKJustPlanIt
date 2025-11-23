@@ -7,7 +7,7 @@ export default function Authentication() {
     const password = formData.get('password');
     
     // handle sign-in logic here
-    await fetch(`https://0s6pd20t-4000.use.devtunnels.ms/api/user/${username}`, {
+    await fetch(`https://5852d90d9e44.ngrok-free.app/api/user/${username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',   
